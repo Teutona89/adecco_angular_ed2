@@ -19,9 +19,15 @@ Algoritmo Variables
 	peso <- 80.5
 	esEstudiante <- Verdadero
 	esDocente <- Falso
+	instagram <- "usuario1"
+	paginaWeb <- "https://formacion.fundacionadecco.org/curso-fundamentos"
+	telefono_fijo1 <- "1111111"
+	telefono_fijo2 <- "2222222"
+	Escribir telefono_fijo2
 	
 	Escribir nombreCompleto, " ", edad
 	Escribir "Nombre: ", nombreCompleto, ", Edad: ", edad, ", Peso (kg): ", peso
-		
+	Escribir "Instagram: ", instagram
+	Escribir paginaWeb
 	
 FinAlgoritmo
