@@ -9,13 +9,11 @@
     
     <h1> Formulario Básico </h1>
 
-    <!-- action= especificar la URL a las que se envían los datos 
-    method= especificar el método HTTP para enviar los datos (get/post)-->
-    <form action="011.etiquetas_semanticas.html" method="post">
+    <!-- action= especificar la URL a las que se envían los datos     method= especificar el método HTTP para enviar los datos (get/post)-->
+    <form action="/backend" method="post">
 
         <!-- div = utilizar como un contenedor o división en HTML, 
-        proporciona estructura y diseño a la página web 
-            
+        proporciona estructura y diseño a la página web   
     -->
         <div>
             <label for="nombre"> Nombre: </label>
@@ -26,6 +24,30 @@
             <label for="telefono"> Telefono móvil: </label>
             <input type="text" name="telefono" id="telefono">
         </div>
+
+        <div>
+            <label for="nif"> NIF/DNI: </label>
+            <input type="text" name="nif" id="nif" placeholder="56789687H">
+        </div>
+
+        <div>
+            <label for="email"> Correo electrónico: </label>
+            <input type="email" name="email" id="email" placeholder="usuario1@gmail.com">
+        </div>
+
+        <div>
+            <label for="contrasena"> Contraseña: </label>
+            <input type="password" name="contrasena" id="contrasena">
+        </div>
+
+        <div>
+            <label for="salary"> Salario: </label>
+            <input type="number" name="salary" id="salary" step="200">
+        </div>
+
+        
+
+
 
     </form>
 
