@@ -14,56 +14,84 @@
 
     <!-- Viene de Forms/layout
     https://getbootstrap.com/docs/5.3/forms/layout/? -->
-    <form class="row g-3">
+    <form class="row g-3" action="/backend" method="post">
         <div class="col-md-6">
-            <label for="inputEmail4" class="form-label">Email</label>
+            <label for="inputName" class="form-label">Nombre: </label>
+            <input type="text" class="form-control" id="inputName">
+        </div>
+        <div class="col-md-6">
+            <label for="inputLastname" class="form-label"> Apellido: </label>
+            <input type="text" class="form-control" id="inputLastname">
+        </div>
+        <div class="col-md-6">
+            <label for="inputEmail4" class="form-label">Email: </label>
             <input type="email" class="form-control" id="inputEmail4">
         </div>
         <div class="col-md-6">
-            <label for="inputEmail4" class="form-label">Email</label>
-            <input type="email" class="form-control" id="inputEmail4">
-        </div>
-        <div class="col-md-6">
-            <label for="inputEmail4" class="form-label">Email</label>
-            <input type="email" class="form-control" id="inputEmail4">
-        </div>
-        <div class="col-md-6">
-            <label for="inputPassword4" class="form-label">Password</label>
+            <label for="inputPassword4" class="form-label">Password: </label>
             <input type="password" class="form-control" id="inputPassword4">
         </div>
         <div class="col-12">
-            <label for="inputAddress" class="form-label">Address</label>
+            <label for="inputAddress" class="form-label">Dirección:</label>
             <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
         </div>
         <div class="col-12">
-            <label for="inputAddress2" class="form-label">Address 2</label>
+            <label for="inputAddress2" class="form-label">Dirección 2:</label>
             <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
         </div>
         <div class="col-md-6">
-            <label for="inputCity" class="form-label">City</label>
+            <label for="inputCity" class="form-label">Ciudad:</label>
             <input type="text" class="form-control" id="inputCity">
         </div>
         <div class="col-md-4">
-            <label for="inputState" class="form-label">State</label>
+            <label for="inputState" class="form-label">Comunidad Autónoma</label>
             <select id="inputState" class="form-select">
-                <option selected>Choose...</option>
-                <option>...</option>
+                <option selected>Selecciona...</option>
+                <option value="m"> Madrid </option>
+                <option value="c"> Cataluña </option>
+                <option value="a"> Andalucía </option>
             </select>
         </div>
         <div class="col-md-2">
-            <label for="inputZip" class="form-label">Zip</label>
+            <label for="inputZip" class="form-label">Código postal:</label>
             <input type="text" class="form-control" id="inputZip">
         </div>
+
+        <fieldset class="row mb-3">
+            <legend class="col-form-label col-sm-2 pt-0">Estado civil: </legend>
+            <div class="col-sm-10">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                <label class="form-check-label" for="gridRadios1">
+                  Casado
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                <label class="form-check-label" for="gridRadios2">
+                  Soltero
+                </label>
+              </div>
+              <div class="form-check disabled">
+                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" disabled>
+                <label class="form-check-label" for="gridRadios3">
+                  Divorciado
+                </label>
+              </div>
+            </div>
+          </fieldset>
+
+
         <div class="col-12">
             <div class="form-check">
                 <input class="form-check-input" type="checkbox" id="gridCheck">
                 <label class="form-check-label" for="gridCheck">
-                    Check me out
+                    Acepto los términos y condiciones. Acepto recibir correos electrónicos de la empresa.
                 </label>
             </div>
         </div>
         <div class="col-12">
-            <button type="submit" class="btn btn-primary">Sign in</button>
+            <button type="submit" class="btn btn-primary">Enviar</button>
         </div>
     </form>
 
