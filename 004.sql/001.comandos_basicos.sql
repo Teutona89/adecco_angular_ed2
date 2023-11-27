@@ -43,7 +43,7 @@ ALTER TABLE empleados ADD COLUMN email VARCHAR(50);
 -- Eliminar columna de una tabla 
 ALTER TABLE empleados DROP COLUMN email;
 
--- Crear tabla empleados 2
+-- Crear tabla empleados 2 con restricciones
 CREATE TABLE IF NOT EXISTS empleados_2(
 id INT PRIMARY KEY,
 nombre VARCHAR(50) NOT NULL,
@@ -57,11 +57,7 @@ edad INT,
 email VARCHAR(100) UNIQUE
 );
 
-
-
-
-
-
+-- Tabla "Productos", mínimo 10 columnas con la interfaz gráfica de SQL
 
 
 
