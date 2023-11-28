@@ -19,6 +19,16 @@ SELECT * FROM category;
 INSERT INTO category (name) VALUE ('accion');
 INSERT INTO category VALUES (19, 'drama', '2020-10-10 12:12:12');
 
+-- Insertar 4 registros/filas de actores, solo agregando nombre y apellido
+INSERT INTO actor (first_name, last_name) 
+VALUES ('Lucia', 'Lopez'),
+('Marcos', 'Tellez'),
+('Luis', 'Estrada'),
+('Fernanda', 'Olivera');
+
+SELECT * FROM actor;
+
+
 
 
 
