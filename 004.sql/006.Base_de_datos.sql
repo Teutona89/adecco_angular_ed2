@@ -12,7 +12,7 @@ direccion TEXT,
 fecha_nacimiento DATE,
 departamento VARCHAR(50),
 salario DECIMAL(10, 2),
-activo TINYINT(1)
+activo TINYINT(1) -- BOOLEAN
 );
 
 -- Especificar la base de datos
@@ -41,5 +41,55 @@ insert into profesores (nombre, apellido, email, telefono, direccion, fecha_naci
 insert into profesores (nombre, apellido, email, telefono, direccion, fecha_nacimiento, departamento, salario, activo) values ('Osbourn', 'Courtliff', 'ocourtliffg@chronoengine.com', '279-730-0870', '6 Hallows Drive', '2023-10-20', 'Support', 2355.34, 0);
 insert into profesores (nombre, apellido, email, telefono, direccion, fecha_nacimiento, departamento, salario, activo) values ('Meta', 'Waight', 'mwaighth@seattletimes.com', '954-944-2956', '1375 Hanover Park', '2023-03-05', 'Engineering', 3144.85, 0);
 insert into profesores (nombre, apellido, email, telefono, direccion, fecha_nacimiento, departamento, salario, activo) values ('Stewart', 'Cheeseman', 'scheesemani@goo.ne.jp', '723-163-5037', '5 Eagle Crest Park', '2023-08-21', 'Marketing', 2411.91, 1);
-insert into profesores (nombre, apellido, email, telefono, direccion, fecha_nacimiento, departamento, salario, activo) values ('Jimmy', 'Theurer', 'jtheurerj@baidu.com', '321-237-7756', '913 Lake View Court', '2023-09-15', 'Accounting', 4603.71, 0);
+insert into profesores (nombre, apellido, email, telefono, direccion, fecha_nacimiento, departamento, salario, activo) 
+values ('Jimmy', 'Theurer', 'jtheurerj@baidu.com', '321-237-7756', '913 Lake View Court', '2023-09-15', 'Accounting', 4603.71, 0);
+
+-- Insert de una fila (registro) sin mockaroo
+insert into profesores (nombre, apellido, email, telefono, direccion, fecha_nacimiento, departamento, salario, activo) 
+values ('Jimmy', 'Theurer', 'jtheurerj@baidu.com', '321-237-7756', '913 Lake View Court', '2023-09-15', 'Accounting', 4603.71, 0);
+-- Si introduzco todos los datos de las columnas puedo omitir especificar el nombre de las columnas
+-- Revisar bien el id, si marca error probar con el siguiente id. No es la manera recomendable de introducir filas/registros
+insert into profesores
+values (22, 'Daniela', 'Estrada', 'daniela@certidevs.com', '999999999', 'Corazón de María #56', '2022-12-10', 'Ventas', 900.00, 1); 
+
+-- Consulta , seleccionar todos los profesores
+-- Otra opción, es desde schemas, clic derecho en la tabla y dar clic a "select rows..."
+SELECT * FROM profesores;
+
+-- Seleccionar a los profesores con el departamento "support"
+SELECT * FROM profesores WHERE departamento = 'Support';
+
+-- Seleccionar a todos los profesores activos
+SELECT * FROM profesores WHERE activo = 1;
+
+-- Seleccionar a todos los profesores con fecha de nacimiento después de 2023-10-10 (AAAA-MM-DD)
+SELECT * FROM profesores WHERE fecha_nacimiento > '2023-10-10';
+
+-- Seleccionar a todos los profesores con un salario mayor que 2000 y menor que 2500.
+SELECT * FROM profesores WHERE salario > 2000 AND salario <2500;
+
+-- Seleccionar a los profesores ordenados por apellido de forma ascendente
+SELECT * FROM profesores ORDER BY apellido ASC;
+-- Seleccionar a los profesores ordenados por apellido de forma descendente
+SELECT * FROM profesores ORDER BY apellido DESC;
+
+-- Seleccionar a los profesores que email con terminación '.com'
+SELECT * FROM profesores WHERE email LIKE '%.com%';
+
+-- Consulta para contar el número total de profesores
+-- Total_profesores crea un alias/variable intermedia
+SELECT COUNT(*) AS total_profesores FROM profesores;
+
+-- Consulta para obtener el salaio promedio de todos los profesores
+SELECT AVG(salario) AS salario_promedio FROM profesores;
+
+
+
+
+
+
+
+
+
+
 
