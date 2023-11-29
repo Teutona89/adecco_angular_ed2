@@ -18,9 +18,11 @@ activo TINYINT(1) -- BOOLEAN
 -- Especificar la base de datos
 USE universidad;
 
+-- SELECT para CONSULTA de datos NO modifica ni elimina ni inserta datos
 -- Consulta de la tabla para confirmar que se creó, opcional por si no la encontrábamos desde schemas
 SELECT * FROM profesores;
 
+-- INSERT INTO para insertar filas/registros a mi tabla
 -- Insertar datos generados en mockaroo
 insert into profesores (nombre, apellido, email, telefono, direccion, fecha_nacimiento, departamento, salario, activo) values ('Hilly', 'Jesse', 'hjesse0@storify.com', '198-954-2554', '5 Main Trail', '2022-11-30', 'Support', 2029.54, 0);
 insert into profesores (nombre, apellido, email, telefono, direccion, fecha_nacimiento, departamento, salario, activo) values ('Jessalin', 'Frodsham', 'jfrodsham1@china.com.cn', '907-145-3656', '055 Birchwood Crossing', '2022-12-24', 'Research and Development', 5843.68, 1);
@@ -78,10 +80,54 @@ SELECT * FROM profesores WHERE email LIKE '%.com%';
 
 -- Consulta para contar el número total de profesores
 -- Total_profesores crea un alias/variable intermedia
+-- AS sería para asignar el nombre de esta columna que se crea momentáneamente
 SELECT COUNT(*) AS total_profesores FROM profesores;
 
--- Consulta para obtener el salaio promedio de todos los profesores
+-- Consulta para obtener el salario promedio de todos los profesores.
 SELECT AVG(salario) AS salario_promedio FROM profesores;
+
+-- Consulta para seleccionar a los profesores con salario mayor a la media
+SELECT * FROM profesores WHERE salario > (SELECT AVG(salario) FROM profesores);
+
+-- Seleccionar a los profesores que nacieron en enero
+SELECT * FROM profesores WHERE MONTH(fecha_nacimiento) =1;
+
+-- Seleccionar a los profesores con salario entre 6000 y 7000
+-- Usando el bewteen 
+SELECT * FROM profesores WHERE salario BETWEEN 6000 AND 7000;
+
+-- Seleccionar a los profesores no activos ( activo = 0) y que tenga un departamento específico = 'Sales'
+SELECT * FROM profesores WHERE activo =0 AND departamento = 'Sales';
+
+-- Insert con datos null
+insert into profesores (nombre, apellido, email) values ('Registro', 'prueba', 'prueba@baidu.com');
+
+-- Seleccionar a los profesores con telefono especificado
+-- Operadores de comparación
+-- '!=' significa diferente de
+SELECT * FROM profesores WHERE telefono IS NOT NULL AND telefono!='';
+
+-- Seleccionar a los profesores inactivos ordenado por fecha de nacimiento ascendente
+SELECT * FROM profesores WHERE activo= 0 ORDER BY fecha_nacimiento ASC;
+
+-- Seleccionar al profesor con salario máximo
+SELECT * FROM profesores WHERE salario = (SELECT MAX(salario) FROM profesores);
+
+-- Seleccionar * profesores con el salario mínimo (MIN) y máximo (MAX) 
+SELECT * FROM profesores WHERE salario = (SELECT MIN(salario) FROM profesores) OR 
+salario= (SELECT MAX(salario) FROM profesores);
+
+
+-- UPDATE .- actualizar/modificar datos existentes
+
+-- Actualizar el teléfono del profesor con id=1
+UPDATE profesores SET telefono = '555555555' WHERE profesor_id =1;
+UPDATE profesores SET telefono = '888888888' WHERE profesor_id =2;
+
+-- Actualizar el departamento del profesor con id =3
+
+
+
 
 
 
