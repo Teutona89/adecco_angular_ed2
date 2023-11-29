@@ -119,12 +119,38 @@ salario= (SELECT MAX(salario) FROM profesores);
 
 
 -- UPDATE .- actualizar/modificar datos existentes
-
 -- Actualizar el teléfono del profesor con id=1
 UPDATE profesores SET telefono = '555555555' WHERE profesor_id =1;
 UPDATE profesores SET telefono = '888888888' WHERE profesor_id =2;
 
 -- Actualizar el departamento del profesor con id =3
+UPDATE profesores SET departamento = 'Ventas' WHERE profesor_id= 3;
+
+-- Modificar el teléfono y el email del profesor con id=3
+UPDATE profesores SET telefono= '111111111', email ='juan@gmail.com' WHERE profesor_id =3; 
+
+-- Modificar el salario del profesor con id= 4
+UPDATE profesores SET salario = 20000 WHERE profesor_id= 4;
+
+-- Modificar el nombre de un departamento, todos los que dicen support se modifiquen a ventas
+UPDATE profesores SET departamento = 'ventas' WHERE departamento = 'Support';
+
+-- Actualizar la dirección y el salario del profesor con id=5
+UPDATE profesores SET direccion = 'Calle luz 65', salario=50000 WHERE profesor_id=5;
+
+
+-- DELETE .- eliminar registros
+-- Eliminar al profesor con id= 1
+DELETE FROM profesores WHERE profesor_id= 1;
+
+-- Eliminar al profesor con id= 21
+DELETE FROM profesores WHERE profesor_id= 21;
+
+-- Eliminar todas las filas/registros de la tabla
+-- No nos deja si tenemos el safe mode (modificar desde edit-> preferences-> SQL Editor, 
+-- deseleccionar el safe mode y cerrar y abrir Workbench)
+DELETE FROM profesores;
+
 
 
 
