@@ -152,6 +152,15 @@ DELETE FROM profesores WHERE profesor_id= 21;
 DELETE FROM profesores;
 
 
+-- Para desactivar el safe mode para hacer updates
+SET sql_safe_updates = 0;
+
+-- Para poder volver a activarlo:
+SET sql_safe_updates = 1;
+
+
+
+
 
 
 
