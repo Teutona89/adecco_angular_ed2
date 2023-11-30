@@ -49,6 +49,8 @@ UPDATE estudiantes SET email= 'correomodificado@gmail.com' WHERE estudiante_id=2
 UPDATE estudiantes SET fecha_nacimiento = '2001-03-10' WHERE nombre= 'Maria Lopez';
 
 -- Eliminar a todos los estudiantes que nacieron después del 2015
+-- No se puede eliminar estudiantes por la clave foránea
+-- error: delete or update a parent row: a foreign key constraint fails 
 DELETE FROM estudiantes WHERE fecha_nacimiento > '2015-01-01';
 
 
