@@ -128,8 +128,36 @@ INSERT INTO eventos_salas(evento_id, sala_id) VALUES
 (3, 3);
 -- clave primaria compuesta, la combinación debe ser única en toda la tabla.
 
-INSERT INTO eventos_salas(evento_id, sala_id) VALUES 
-(1, 1);
+-- Esta línea es de prueba para ver que no se pueden repetir las claves primarias
+-- compuestas
+-- INSERT INTO eventos_salas(evento_id, sala_id) VALUES (1, 1);
+
+-- Asociación Many-to-Many
+-- Libros y categorías, podemos categorizar los libros en diferentes géneros
+-- y un libro puede perteneces a varias categorías a la vez
+
+-- Para mostrar las columnas de una tabla
+show columns from libros;
+
+-- Crear la tabla de categorias
+CREATE TABLE categorias (
+categoria_id INT AUTO_INCREMENT PRIMARY KEY,
+nombre VARCHAR(50) NOT NULL
+);
+
+-- Crear la tabla de unión que relaciona libros con categorías.
+CREATE TABLE libros_categorias(
+libro_id INT,
+categoria_id INT,
+PRIMARY KEY (libro_id, categoria_id),
+FOREIGN KEY (libro_id) REFERENCES libros(libro_id) ON DELETE CASCADE,
+FOREIGN KEY (categoria_id) REFERENCES categorias(categoria_id) ON DELETE CASCADE
+);
+
+-- ON DELETE CASCADE= asegura que los registros de una tabla se eliminen automáticamente
+-- si se elimina un libro o una categoría.
+
+
 
 
 
