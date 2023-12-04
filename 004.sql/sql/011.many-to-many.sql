@@ -115,7 +115,21 @@ INSERT INTO salas(nombre, capacidad) VALUES
 ('Sala B', 100),
 ('Sala C', 30);
 
--- Insertar datos a la tabla evento_salas
+-- Insertar datos a la tabla eventos_salas
+INSERT INTO eventos_salas(evento_id, sala_id) VALUES 
+(1, 1), -- taller escritura/ sala a
+(1, 2), -- taller de escritura/ sala b
+(1, 3), -- taller de escritura /sala c
+(2, 1), -- club de lectura /sala a
+(2, 2),
+(2, 3),
+(3, 1),
+(3, 2),
+(3, 3);
+-- clave primaria compuesta, la combinación debe ser única en toda la tabla.
+
+INSERT INTO eventos_salas(evento_id, sala_id) VALUES 
+(1, 1);
 
 
 
