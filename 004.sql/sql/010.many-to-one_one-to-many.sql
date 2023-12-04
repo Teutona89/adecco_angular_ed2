@@ -45,4 +45,33 @@ INSERT INTO ventas (monto, cliente_id) VALUES
 (45.67, 4);
 
 
+-- Crear dos tablas, una de "departamentos" y otra de "empleados"
+-- Varios empleados puedan trabajar en el mismo departamento (5 empleados en Recursos Humanos)
+-- tabla departamentos= departamento_id, nombre
+-- tabla empleados= empleado_id, nombre, apellido, departamento_id, FK
+
+CREATE TABLE departamentos (
+departamento_id INT AUTO_INCREMENT PRIMARY KEY,
+nombre VARCHAR(50)
+);
+
+CREATE TABLE empleados (
+empleado_id INT AUTO_INCREMENT PRIMARY KEY,
+nombre VARCHAR(50),
+apellido VARCHAR(50),
+departamento_id INT,
+FOREIGN KEY (departamento_id) REFERENCES departamentos(departamento_id)
+);
+
+INSERT INTO departamentos(nombre) VALUES
+('Ventas'),
+('Recursos Humanos'),
+('Administración');
+
+INSERT INTO empleados(nombre, apellido, departamento_id) VALUES
+('Laura', 'Rodriguez', 1),
+('Javier', 'Gomez', 1), 
+('Ana', 'Lopez', 2), 
+('Carlos', 'Garcia', 3);
+
 
