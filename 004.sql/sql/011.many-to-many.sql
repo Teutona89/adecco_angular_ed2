@@ -157,7 +157,18 @@ FOREIGN KEY (categoria_id) REFERENCES categorias(categoria_id) ON DELETE CASCADE
 -- ON DELETE CASCADE= asegura que los registros de una tabla se eliminen automáticamente
 -- si se elimina un libro o una categoría.
 
+-- Insertar datos a categorías
+INSERT INTO categorias (nombre) VALUES 
+('Ficción'),
+('Ciencia'),
+('Arte');
 
+-- Insertar datos en la tabla de unión libros_categorias
+INSERT INTO libros_categorias (libro_id, categoria_id) VALUES
+(1, 1), -- Libro 1 está categorizado como de "ficción"
+(1, 2), -- Libro 1 tiene la categoría de "ciencias"
+(2, 3), -- Libro 2 categoría arte
+(3, 1); -- Libro 3 categoría ficción
 
 
 
