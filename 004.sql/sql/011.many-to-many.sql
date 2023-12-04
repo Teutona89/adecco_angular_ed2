@@ -73,7 +73,49 @@ INSERT INTO libros(titulo, autor_id) VALUES
 ('Libro 6', 3);
 
 
+-- Asociación Many-to-Many /Muchos a Muchos
 
+--  Crear tabla de eventos que se realizan en una biblioteca (talleres, coneferencias)
+CREATE TABLE eventos(
+evento_id INT AUTO_INCREMENT PRIMARY KEY,
+nombre VARCHAR(100) NOT NULL,
+descripcion TEXT,
+fecha_evento DATE
+);
+
+-- Crear tabla de salas
+CREATE TABLE salas(
+sala_id INT AUTO_INCREMENT PRIMARY KEY,
+nombre VARCHAR(100),
+capacidad int
+);
+
+-- Crear la tabla de unión que relacione eventos con las salas.
+-- Un evento puede tener varias salas, y una sala puede ser utilizada para varios eventos
+-- Crear tabla eventos_salas
+CREATE TABLE eventos_salas (
+evento_id INT,
+sala_id INT,
+PRIMARY KEY (evento_id, sala_id), -- establece la clave primaria compuesta
+FOREIGN KEY (evento_id) REFERENCES eventos(evento_id),
+FOREIGN KEY (sala_id) REFERENCES salas(sala_id)
+);
+
+
+-- Clave primaria compuesta (debe ser única en toda la tabla)
+-- Introducir datos
+INSERT INTO eventos(nombre, descripcion, fecha_evento) VALUES
+('Taller de escritura', 'Un taller para aspirantes a escritores', '2023-01-15'),
+('Club de lectura', 'Discusión sobre libros', '2023-02-12'),
+('Conferencia de Historia', 'Charla de historia', '2023-03-18');
+
+-- Insertar datos a la tabla salas
+INSERT INTO salas(nombre, capacidad) VALUES
+('Sala A', 50),
+('Sala B', 100),
+('Sala C', 30);
+
+-- Insertar datos a la tabla evento_salas
 
 
 
