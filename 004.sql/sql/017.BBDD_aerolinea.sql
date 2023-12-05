@@ -63,6 +63,22 @@ SELECT aviones.modelo, vuelos.destino
 FROM aviones
 RIGHT JOIN vuelos ON aviones.avion_id = vuelos.avion_id;
 
+-- Utilizar un Right Join para mostrar todos los vuelos y los modelos de aviones 
+-- asociados, ordenando por fecha (DESC)
+-- Si no especifico que el 'ORDER BY' sea DESC, por default lo ordena ASC
+SELECT aviones.modelo, vuelos.destino, vuelos.fecha
+FROM aviones
+RIGHT JOIN vuelos ON aviones.avion_id = vuelos.avion_id
+ORDER BY vuelos.fecha DESC;
+
+-- Consulta que devuelva los destinos y fechas de vuelos para un modelo de 
+-- avión específico (Modelo 1)
+SELECT aviones.modelo, vuelos.destino, vuelos.fecha
+FROM aviones
+INNER JOIN vuelos ON aviones.avion_id = vuelos.avion_id
+WHERE aviones.modelo ='Modelo 1';
+
+
 
 
 
