@@ -28,3 +28,24 @@ if es_estudiante or precio_total > 100:
     print(f'Tienes un descuento, precio: {precio_total}')
 else:
     print(f'No tienes descuento, precio: {precio_total}')
+
+## not para invertir un valor boolean , es útil cuando quieres ejecutar 
+# un código cuando una condición no se cumple
+
+edad_usuario = int(input('Introduce tu edad'))
+
+if not edad_usuario >= 18:
+    print('No tiene acceso')
+else:
+    print('Tiene acceso')
+    
+    
+# Combinar not con or
+
+email = input('Introduce tu email: ')
+password = input('Introduce tu password: ')
+
+if not email or not password:
+    print('Todos los campos son obligatorios.')
+else:
+    print('Registro completado.')
