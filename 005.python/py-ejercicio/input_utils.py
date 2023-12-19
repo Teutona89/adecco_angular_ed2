@@ -47,3 +47,7 @@ def read_bool(prompt):
     
 # alta = read_bool('Está dado de alta si/no: ')
 # print(f'alta {alta}')
+
+def read_email():
+    pass
+
