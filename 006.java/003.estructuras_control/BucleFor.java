@@ -14,6 +14,13 @@ public class BucleFor {
         for (int i = 0; i < 20; i += 2) {
             System.out.println(i);
         }
+
+        // de 20 a 0, a la inversa, decrementando
+
+        for (int i = 20; i > 0; i--) {
+            System.out.println(i);
+        }
+
     }
     
 }
