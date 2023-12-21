@@ -1,6 +1,6 @@
 
 
-public class OperadoresLogicos {
+public class OperadorLogicoAnd {
 
     public static void main(String[] args) {
         
