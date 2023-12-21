@@ -17,7 +17,8 @@ public class OperadorTernario {
         }
         System.out.println(impuestos);
 
-        // operador ternario
+        // operador ternario: 
+        // condicion/es ? resultadoSiTrue : resultadoSiFalse;
         impuestos = premio > 40_000 ? premio * 0.20 : 0;
         System.out.println(impuestos);
     }
