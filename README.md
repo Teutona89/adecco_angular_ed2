@@ -45,3 +45,9 @@ Presentación a empresas / Empleabilidad:
 * Opcional: página web personal, www.nombreapellido.com
 
 
+Desarrollo Videojuegos:
+
+* Lenguaje: C#
+* Plataforma: Unity
+* Modelado 2D y 3D: Blender o Maya, 
+* Texturizado: Photoshop, Gimp
