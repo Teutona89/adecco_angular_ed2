@@ -12,5 +12,7 @@ public class BucleForArray {
         for (int i = 0; i < nombres.length; i++) {
             System.out.println(nombres[i]);
         }
+
+
     }
 }
