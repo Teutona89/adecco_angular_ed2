@@ -11,6 +11,7 @@ public class FuncionesConReturn2 {
         int resultadoResta = resta(numero1, numero2);
         System.out.println(resultadoResta);
         
+        // EJEMPLO CON ARRAY
         double[] calificaciones = { 7.4, 5.6, 8.3, 9.1 };
         double calificacionFinal = calcularCalificacion(calificaciones); // calcula la nota media
         System.out.println(calificacionFinal);
