@@ -32,5 +32,18 @@ public class ArrayListEjemplo1 {
         emails.add("prueba2@gmail.com");
         emails.add("prueba3@gmail.com");
 
+
+        ArrayList<Boolean> aprobados = new ArrayList<>();
+        aprobados.add(true);
+        aprobados.add(false);
+        aprobados.add(true);
+        aprobados.add(false);
+
+        ArrayList<Integer> edades = new ArrayList<>();
+        edades.add(15);
+        edades.add(20);
+        edades.add(15);
+
+        
     }
 }
