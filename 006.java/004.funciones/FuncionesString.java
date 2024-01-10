@@ -27,5 +27,9 @@ public class FuncionesString {
 
             System.out.println(firstName + " es desarrollador de software a jornada completa.");
         }
+
+        System.out.println(nombre.startsWith("A")); // true
+        System.out.println(nombre.endsWith("developer")); // true
+
     }
 }
