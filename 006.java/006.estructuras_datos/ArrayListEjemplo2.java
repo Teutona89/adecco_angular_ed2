@@ -35,8 +35,10 @@ public class ArrayListEjemplo2 {
         System.out.println(productos.size()); // 1
 
         // Comprobar si un elemento existe dentro de la lista
+        // Guardar el resultado en una variable e imprimirlo
         boolean pcExist = productos.contains("PC MSI");
         System.out.println(pcExist);
+        // Imprimir el resultado directamente sin crear una variable
         System.out.println(productos.contains("PC MSI"));
 
         boolean isEmpty = productos.isEmpty();
