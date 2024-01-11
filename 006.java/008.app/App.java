@@ -1,7 +1,12 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class App {
+
+    static ArrayList<String> productos = new ArrayList<>();
     public static void main(String[] args) {
+        productos.add("ASUS A55A");
+
         String menu = """
                 Opciones:
                 1 - Mostrar productos
@@ -18,8 +23,8 @@ public class App {
             System.out.println("Introduce una opcion: ");
             int option = scanner.nextInt(); // Lee un número entero por consola
             switch(option) {
-                case 1 -> System.out.println("opcion 1");
-                case 2 -> System.out.println("opcion 2");
+                case 1 -> showProducts();
+                case 2 -> showProduct();
                 case 3 -> System.out.println("opcion 3");
                 case 4 -> System.out.println("opcion 4");
                 case 5 -> System.out.println("opcion 5");
@@ -27,5 +32,14 @@ public class App {
             }
         }
         // break salir del bucle
+    }
+
+    private static void showProduct() {
+     
+    }
+
+    private static void showProducts() {
+        // imprimir la lista de productos
+        System.out.println(productos);
     }
 }
