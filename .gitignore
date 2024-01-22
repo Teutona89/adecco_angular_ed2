@@ -4,6 +4,7 @@
 ### Angular ###
 ## Angular ##
 # compiled output
+.vscode
 dist/
 tmp/
 app/**/*.js
