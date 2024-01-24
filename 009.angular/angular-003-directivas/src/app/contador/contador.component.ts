@@ -18,6 +18,16 @@ export class ContadorComponent {
     this.contador++;
   }
   // método para decrementar
+  decrementar() {
+    if(!this.contador)
+      this.contador = 0;
+
+    if(this.contador > 0) // condicion para evitar decrementar por debajo de 0
+      this.contador--;
+  }
 
   // método para resetear a 0
+
+  // método getCounterStyle para obtener color en base a número
+  // y usarlo con la directiva ngStyle
 }
