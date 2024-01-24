@@ -1,9 +1,10 @@
+import { NgStyle } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-contador',
   standalone: true,
-  imports: [],
+  imports: [NgStyle],
   templateUrl: './contador.component.html',
   styleUrl: './contador.component.css'
 })
@@ -35,6 +36,17 @@ export class ContadorComponent {
 
   // método getCounterStyle para obtener color en base a número
   // y usarlo con la directiva ngStyle
+  getCounterStyle(): any {
+    if (this.contador && this.contador < 5) {
+      return {color: "red"};
 
-  // deshabilitar botones en función del contador
+    } else if (this.contador && this.contador < 10) {
+      return {color: "blue"};
+      
+    } else {
+      return {color: "green"};
+    }
+
+  }
+
 }
