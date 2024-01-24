@@ -21,7 +21,23 @@
   } @empty {
     <li>No se han encontrado elementos.</li>
   }
-
 </ul>
+
+<!-- hace bucle for sobre rows de tabla-->
+<table>
+
+  <tr>
+    <th>Título</th>
+    <th>Precio</th>
+  </tr>
+
+  @for (producto of productos; track producto) {
+    <tr>
+      <td>{{producto.title}}</td>
+      <td>{{producto.price}}</td>
+    </tr>
+  }
+
+</table>
 
 
