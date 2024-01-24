@@ -26,8 +26,15 @@ export class ContadorComponent {
       this.contador--;
   }
 
-  // método para resetear a 0
+  // método para resetear a undefined
+  resetear() {
+    const reset = confirm("Esta operación elimina el contador, ¿Quiere proceder?");
+    if (reset)
+      this.contador = undefined;
+  }
 
   // método getCounterStyle para obtener color en base a número
   // y usarlo con la directiva ngStyle
+
+  // deshabilitar botones en función del contador
 }
