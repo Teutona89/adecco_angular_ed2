@@ -34,6 +34,27 @@ export class UserListComponent implements OnInit{
         salary: 3000.0,
         active: false,
         registerDate: new Date()
+      },
+      {
+        id: 3,
+        email: "user3@gmail.com",
+        salary: 4000.0,
+        active: false,
+        registerDate: new Date()
+      },
+      {
+        id: 4,
+        email: "user4@gmail.com",
+        salary: 2500.0,
+        active: false,
+        registerDate: new Date()
+      },
+      {
+        id: 5,
+        email: "user5@gmail.com",
+        salary: 3000.0,
+        active: false,
+        registerDate: new Date()
       }
     ];
 
