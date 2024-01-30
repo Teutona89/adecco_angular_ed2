@@ -12,6 +12,7 @@
 * Vladimir
 * Diego
 * Diana
+* Roland
 
 ## Grupo 2:
 
@@ -26,7 +27,6 @@
 * Alexandra
 * Marian
 * Emilia
-* Roland
 * Jana
 
 ## Grupo 4: 
