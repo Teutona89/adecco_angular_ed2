@@ -1,1 +1,37 @@
-<p>restaurant-list works!</p>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Location</th>
+            <th scope="col">Rating</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for(restaurant of restaurants; track restaurant.id) {
+            <tr>
+                <!-- TODO: Agregar una imagen -->
+                <td>{{restaurant.id}}</td>
+                <td>{{restaurant.name}}</td>
+                <td>{{restaurant.location}}</td>
+                <td>{{restaurant.rating}}</td>
+                <td>{{restaurant.phone}}</td>
+                <td>
+                  <button class="btn btn-success"
+                  [routerLink]="['/restaurantes', restaurant.id, 'detalle']">
+                  Ver detalle</button>
+                </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
