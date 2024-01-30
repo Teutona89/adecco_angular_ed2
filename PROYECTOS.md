@@ -12,7 +12,6 @@
 * Vladimir
 * Diego
 * Diana
-* Eunice ? 
 
 ## Grupo 2:
 

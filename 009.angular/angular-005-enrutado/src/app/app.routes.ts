@@ -8,7 +8,7 @@ export const routes: Routes = [
     component: RestaurantListComponent
   },
   {
-    path: 'ruta2',
+    path: 'restaurantes/nuevo',
     component: RestaurantFormComponent
   }
 
