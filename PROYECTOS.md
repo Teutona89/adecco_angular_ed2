@@ -7,14 +7,14 @@
 * Repositorio GitHub
 
 
-## Grupo 1: 
+## Grupo 1: marketplace de aplicaciones (similar a itch.io)
 
 * Vladimir
 * Diego
 * Diana
 * Roland
 
-## Grupo 2:
+## Grupo 2: ecommerce, idealista
 
 * Raquel
 * Albora
@@ -29,7 +29,7 @@
 * Emilia
 * Jana
 
-## Grupo 4: 
+## Grupo 4: alquiler casas rurales tipo booking, ecommerce de cupcakes
 
 * Susana
 * Almudena
