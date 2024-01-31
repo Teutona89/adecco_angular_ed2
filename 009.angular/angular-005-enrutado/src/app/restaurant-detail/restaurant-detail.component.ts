@@ -31,7 +31,8 @@ export class RestaurantDetailComponent implements OnInit{
         name: "Tres Mares",
         location: "Calle corazón María 63",
         phone: "654789999",
-        rating: 5
+        rating: 5,
+        imageUrl: "https://placehold.co/300"
       };
 
     // llamar al backend pidiendo el restaurante por el id
