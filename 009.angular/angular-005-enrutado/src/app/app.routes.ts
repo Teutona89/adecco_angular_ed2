@@ -23,9 +23,20 @@ export const routes: Routes = [
     component: RestaurantBookingComponent
   },
   {
-    path: '**',
+    path: 'not-found-404',
+    component: NotFoundComponent
+  },
+  {
+    path: '**', // ruta comodín que atrapa cualquier url que se escriba
+    redirectTo: '/not-found-404'
+  }
+  // Opción en la que se conserva la ruta errónea
+  /*
+  ,{
+    path: '**', // ruta comodín que atrapa cualquier url que se escriba
     component: NotFoundComponent
   }
+  */
 
 
 
