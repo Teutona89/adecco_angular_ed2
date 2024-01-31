@@ -12,7 +12,7 @@
 * Vladimir
 * Diego
 * Diana
-* Roland
+* Damaris Montilla
 
 ## Grupo 2: ecommerce, idealista
 
@@ -26,10 +26,14 @@
 
 * Alexandra
 * Marian
+
+## GRUPO 4:
+
 * Emilia
 * Jana
+* Roland
 
-## Grupo 4: alquiler casas rurales tipo booking, ecommerce de cupcakes
+## Grupo 5: alquiler casas rurales tipo booking, ecommerce de cupcakes
 
 * Susana
 * Almudena
@@ -55,10 +59,13 @@
 ## REQUISITOS MÍNIMOS:
 
 * 4-5 tablas: usuario, proyecto, tarea, categoría, etiqueta, comentario/valoracion/opinion
-* Asociaciones:
+    * Las tablas se crean desde interfaces typeScript con backend NestJS
+
+* Asociaciones entre los modelos, se hace en las interfaces de TypeScript.
     * One to One
     * Many To One
     * Many to Many
+
 * 3 componentes por cada modelo/tabla, se deben poder hacer las operaciones CRUD:
     * Listado / Grid (mostrar varios elementos)
     * Detalle (mostrar un elemento principal)
