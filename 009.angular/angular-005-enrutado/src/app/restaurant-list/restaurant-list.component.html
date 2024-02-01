@@ -33,11 +33,13 @@
                 <td>
                   <button class="btn btn-success me-2"
                   [routerLink]="['/restaurantes', restaurant.id, 'detalle']">
+                  <i class="bi bi-eye"></i>
                   Ver detalle</button>
 
                   <button class="btn btn-primary"
-                  [routerLink]="['/restaurantes', restaurant.id, 'reservas']"
-                  >Hacer reserva</button>
+                  [routerLink]="['/restaurantes', restaurant.id, 'reservas']">
+                  <i class="bi bi-ticket"></i>
+                  Hacer reserva</button>
 
                 </td>
             </tr>
