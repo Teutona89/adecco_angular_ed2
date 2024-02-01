@@ -14,6 +14,15 @@
 * Diana
 * Damaris Montilla
 
+Interfaces:
+
+* Application/SoftwareApp
+* Comentarios/Reviews
+* Category
+* User: normal o developer
+* Company
+
+
 ## Grupo 2: ecommerce, idealista
 
 * Raquel
@@ -22,16 +31,58 @@
 * Ana
 * Mario
 
-## Grupo 3:
+Opcion 1.
+
+* Product
+* Category
+* Manufacturer
+* User
+* ShopCart
+* Order
+
+Opcion2: 
+
+* Vivienda
+* Comentarios
+* User
+* Reserva
+
+
+## Grupo 3: Energía solar, Netflix
 
 * Alexandra
 * Marian
 
-## GRUPO 4:
+Interfaces:
+
+* Serie
+* Capitulo
+* Valoracion/Comentario
+* Pelicula
+* User
+
+energía solar:
+
+* Producto
+* Tarifa
+* Plan electricidad
+* Usuario
+* Simulador presupuesto
+
+## GRUPO 4: Buscador centros de belleza
 
 * Emilia
 * Jana
 * Roland
+
+Interfaces:
+
+* Centro
+* Servicio
+* CategoriaServicio
+* Bono
+* Cita/Reserva
+* Usuario
 
 ## Grupo 5: alquiler casas rurales tipo booking, ecommerce de cupcakes
 
@@ -40,6 +91,14 @@
 * Gemma
 * Beatriz
 * Erika
+
+Interfaces:
+
+* Casa
+* Usuario
+* Reserva
+* Comentario
+
 
 ## PENDIENTE PARA CADA GRUPO
 
