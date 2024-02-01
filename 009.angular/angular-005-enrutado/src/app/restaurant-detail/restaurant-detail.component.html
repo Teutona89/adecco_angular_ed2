@@ -4,7 +4,12 @@
   <div class="row">
     <div class="col-4 text-center">
 
-      <img class="img-fluid" [src]="restaurant?.imageUrl">
+      @if (restaurant && restaurant.imageUrl && restaurant.imageUrl.length > 0){
+        <img class="img-fluid" [src]="restaurant.imageUrl" alt="Foto restaurante">
+      } @else {
+        <!--<p class="py-5">Este restaurante no tiene imagen de perfil.</p>-->
+        <img class="img-fluid" src="https://ui-avatars.com/api/?name=A&size=256">
+      }
 
     </div>
     <div class="col-8">
