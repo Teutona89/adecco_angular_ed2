@@ -131,3 +131,23 @@ Interfaces:
     * Formulario
 
 * Página web responsive, se debe ver bien en ordenador principalmente y en móvil.
+
+
+## SUBIR PROYECTO A GITHUB
+
+Una persona del grupo sería la encargada de crear y subir el proyecto
+
+* Crear carpeta angular_grupoX
+* Dentro generar el frontend como ng new frontend ....
+* Dentro generar el backend
+
+Resultado:
+
+
+* angular_grupo1
+    * frontend (angular)
+    * backend (nestjs)
+    * README.md
+
+Una vez subido dentro de Github en Settings en Collaborators a gregar a los demás integrantes del equipo.
+
