@@ -18,5 +18,9 @@ export class ProductListComponent {
     let texto = this.productService.holaMundo();
     console.log(texto);
   }
+  imprimirProduct(): void {
+    // obtener el producto e imprimirlo por consola
+    this.productService.obtenerProducto1().subscribe(p => console.log(p));
+  }
 
 }
