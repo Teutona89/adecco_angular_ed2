@@ -8,6 +8,8 @@ import { Observable } from 'rxjs';
 })
 export class ProductService {
 
+  // inyeccion 
+
   constructor(private httpClient: HttpClient) { }
   // metodos
   holaMundo(): string{
@@ -27,4 +29,18 @@ export class ProductService {
     // return this.httpClient.get<Product>(`https://fakestoreapi.com/products/${id}`);
     return this.httpClient.get<Product>('https://fakestoreapi.com/products/' + id);
   }
+  // Metodo create para enviar un producto al API REST 
+// Esto crearia un nuevo producto en base de datos
+create(product: Product) {
+  return this.httpClient.post<Product>('https://fakestoreapi.com/products/', product)
+  }
+
+  //Metodo para actualizar un producto en el API REST 
+  update(id: number | string, product: Product): Observable<Product> {
+  return this.httpClient.post<Product>('https://fakestoreapi.com/products/' +id, product)
+  }
+
+  //Metodo para borrar un producto 
+  
 }
+
