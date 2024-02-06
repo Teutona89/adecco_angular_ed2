@@ -34,5 +34,13 @@ export class ProductService {
 create(product: Product) {
   return this.httpClient.post<Product>('https://fakestoreapi.com/products/', product)
   }
+
+  //Metodo para actualizar un producto en el API REST 
+  update(id: number | string, product: Product): Observable<Product> {
+  return this.httpClient.post<Product>('https://fakestoreapi.com/products/' +id, product)
+  }
+
+  //Metodo para borrar un producto 
+  
 }
 
