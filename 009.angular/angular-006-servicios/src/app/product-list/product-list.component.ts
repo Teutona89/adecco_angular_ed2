@@ -31,11 +31,9 @@ export class ProductListComponent implements OnInit {
     this.productService.obtenerProducto1().subscribe(p => console.log(p));
   }
 
-
-
   crearProducto(): void {
     //Crear un objeto tipo Product
-    const tvSamsung: Producto = {
+    const tvSamsung: Product = {
       id: 20,
       description: 'Example',
       category: 'Eletronica',
@@ -44,9 +42,9 @@ export class ProductListComponent implements OnInit {
         rate: 4.5,
         count: 120
       }
-    }
+    };
     // Enviar ese objeto producto a API REST BACKEND
-    this.productService.create(tvSamsung).subscribe();
+    this.productService.create(tvSamsung).subscribe(p => console.log(p));
   }
 }
 
