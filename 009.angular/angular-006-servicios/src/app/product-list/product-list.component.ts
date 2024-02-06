@@ -11,11 +11,11 @@ import { Product } from '../interfaces/product.model';
   templateUrl: './product-list.component.html',
   styleUrl: './product-list.component.css'
 })
-export class ProductListComponent implements OnInit{
+export class ProductListComponent implements OnInit {
 
   products: Product[] = []; // ARRAY DE PRODUCTOS QUE VIENEN DE FAKESTORE API
 
-  constructor(private productService: ProductService) {}
+  constructor(private productService: ProductService) { }
 
   ngOnInit(): void {
     // llamar al servicio y traer los productos de FAKE STORE API
@@ -31,4 +31,22 @@ export class ProductListComponent implements OnInit{
     this.productService.obtenerProducto1().subscribe(p => console.log(p));
   }
 
+
+
+  crearProducto(): void {
+    //Crear un objeto tipo Product
+    const tvSamsung: Producto = {
+      id: 20,
+      description: 'Example',
+      category: 'Eletronica',
+      price: 200,
+      rating: {
+        rate: 4.5,
+        count: 120
+      }
+    }
+    // Enviar ese objeto producto a API REST BACKEND
+    this.productService.create(tvSamsung).subscribe();
+  }
 }
+
