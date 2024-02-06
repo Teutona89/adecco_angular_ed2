@@ -46,5 +46,27 @@ export class ProductListComponent implements OnInit {
     // Enviar ese objeto producto a API REST BACKEND
     this.productService.create(tvSamsung).subscribe(p => console.log(p));
   }
-}
 
+  actualizarProducto() {
+    const tvSamsung: Product = {
+      id: 20,
+      description: 'Example',
+      category: 'Eletronica',
+      price: 500,
+      image: '',
+      title: 'Tv Samsung',
+      rating: {
+        rate: 4.5,
+        count: 120
+      } 
+    }
+
+    // update
+    this.productService.update(1,tvSamsung).subscribe(p => console.log(p));
+  }
+
+  borrarProducto() {
+
+    this.productService(5).subscribe(p => console.log(p));
+  }
+}

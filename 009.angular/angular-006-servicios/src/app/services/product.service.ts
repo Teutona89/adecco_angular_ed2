@@ -41,6 +41,8 @@ create(product: Product) {
   }
 
   //Metodo para borrar un producto 
-  
+    deleteById(id: number | string) {
+      return this.httpClient.delete('https://fakestoreapi.com/products/' + id);
+    }
 }
 
